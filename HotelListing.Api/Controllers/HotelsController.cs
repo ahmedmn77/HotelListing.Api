@@ -7,7 +7,7 @@ namespace HotelListing.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HotelsController  : ControllerBase
+    public class HotelsController : ControllerBase
     {
         //private: only code inside the HotelsController class can access hotels.
 	    //static: the hotels list belongs to the class itself, not to individual controller instances.
