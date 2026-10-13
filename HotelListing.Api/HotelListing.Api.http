@@ -36,11 +36,3 @@ Content-Type: application/json
 }
 
 ###
-
-GET {{HotelListing.Api_HostAddress}}/api/hotels
-
-###
-
-GET {{HotelListing.Api_HostAddress}}/api/hotels/{{id}}
-
-###
