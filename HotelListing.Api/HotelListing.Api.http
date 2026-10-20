@@ -1,5 +1,41 @@
 @HotelListing.Api_HostAddress = https://localhost:7234
 
+GET {{HotelListing.Api_HostAddress}}/api/countries
+
+###
+
+@countryid = 6
+DELETE {{HotelListing.Api_HostAddress}}/api/countries/{{countryid}}
+
+###
+
+
+GET {{HotelListing.Api_HostAddress}}/api/countries/{{countryid}}
+
+###
+
+
+PUT {{HotelListing.Api_HostAddress}}/api/countries/{{countryid}}
+Content-Type: application/json
+
+{
+  "id": 6,
+  "name": "Test Put",
+  "shortName": "JS"
+}
+
+###
+
+POST {{HotelListing.Api_HostAddress}}/api/countries
+Content-Type: application/json
+
+{
+  "name": "Jamica",
+  "shortName": "JS"
+}
+
+###
+
 GET {{HotelListing.Api_HostAddress}}/api/hotels
 
 ###
@@ -7,32 +43,33 @@ GET {{HotelListing.Api_HostAddress}}/api/hotels
 POST {{HotelListing.Api_HostAddress}}/api/hotels
 Content-Type: application/json
 
-{  
-    "id": 5,
-    "name": "Hotel D",
-    "address": "test address",
-    "rating": 3.8  
+{
+  "name": "Hotel Example",
+  "address": "123 Example Street",
+  "rating": 4.5,
+  "CountryId": 6
 }
 
 ###
 
-@id=2
+@id=3
 DELETE {{HotelListing.Api_HostAddress}}/api/hotels/{{id}}
 
 ###
 
-GET {{HotelListing.Api_HostAddress}}/api/hotels/3
+GET {{HotelListing.Api_HostAddress}}/api/hotels/{{id}}
 
 ###
 
-PUT {{HotelListing.Api_HostAddress}}/api/hotels/5
+PUT {{HotelListing.Api_HostAddress}}/api/hotels/{{id}}
 Content-Type: application/json
 
 {
-  "id": 5,
-  "name": "Hotel Modified",
-  "address": "test address Modified",
-  "rating": 3.8  
+  "id": 3,
+  "name": "Hotel California",
+  "address": "123 Example Street",
+  "rating": 4.5,
+  "CountryId": 3
 }
 
 ###
