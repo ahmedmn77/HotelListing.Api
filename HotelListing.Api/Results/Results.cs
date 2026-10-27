@@ -1,4 +1,7 @@
-﻿namespace HotelListing.Api.Results;
+﻿//This is an implementaition of Resul pattern which is very useful on API project design
+//It is used on the services, to return the result object which contains the dto as its value and customized errors list
+
+namespace HotelListing.Api.Results;
 
 public readonly record struct Error(string Code, string Description)
 {

@@ -58,6 +58,7 @@ public class CountriesService(HotelListingDbContext context, IMapper mapper) : I
         }
     }
 
+    //this method return Result struct not the generic one
     public async Task<Result> UpdateCountryAsync(int id, UpdateCountryDto updateDto)
     {
         try
@@ -85,6 +86,7 @@ public class CountriesService(HotelListingDbContext context, IMapper mapper) : I
         }
     }
 
+    //this method return Result struct not the generic one
     public async Task<Result> DeleteCountryAsync(int id)
     {
         try
