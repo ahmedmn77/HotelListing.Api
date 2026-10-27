@@ -9,6 +9,7 @@ public readonly record struct Error(string Code, string Description)
     public bool IsNone => string.IsNullOrWhiteSpace(Code);
 }
 
+//Used on update and delete methods on the service
 public readonly record struct Result
 {
     public bool IsSuccess { get; }
@@ -29,6 +30,7 @@ public readonly record struct Result
            : Success();
 }
 
+//Used on get and create(post) methods on the service
 public readonly record struct Result<T>
 {
     public bool IsSuccess { get; }

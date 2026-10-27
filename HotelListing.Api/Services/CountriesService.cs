@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HotelListing.Api.Services;
 
+//all methods on this service return result object (normal struct or generic struct)
 public class CountriesService(HotelListingDbContext context, IMapper mapper) : ICountriesService
 {
     public async Task<Result<IEnumerable<GetCountriesDto>>> GetCountriesAsync()
